@@ -1,0 +1,40 @@
+﻿@model CoreDemo.Models.UserUpdateViewModel
+@{
+	ViewData["Title"] = "WriterUpdateProfile";
+	Layout = "~/Views/Writer/WriterLayout.cshtml";
+}
+
+<h1>WriterUpdateProfile</h1>
+	<div class="col-12 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Yazar Profil Bilgileri Düzenleme</h4>
+				<br/>	
+				<form class="forms-sample" method="post">
+					<div class="form-group">
+						<label for="exampleInputName1">Yazar Adı Soyadı</label>
+						<input type="text" asp-for="@Model.fullName" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputName1">Kullanıcı Adı</label>
+						<input type="text" asp-for="@Model.userName" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail3">E-Posta Adresi</label>
+						<input type="text" asp-for="@Model.eMail" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail3">Yeni Şifreniz</label>
+						<input type="text" asp-for="@Model.password" class="form-control"/>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail3">Yazar Görseli</label>
+						<input type="text" asp-for="@Model.imageUrl" class="form-control"/>
+					</div>
+					<button type="submit" class="btn btn-gradient-primary mr-2">Güncelle</button>
+					<button asp-controller="Dashboard" asp-action="Index" class="btn btn-light">İptal</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
